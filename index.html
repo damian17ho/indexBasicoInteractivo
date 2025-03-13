@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Interactiva</title>
+    <style>
+        /* CSS: Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaeaea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #1a73e8;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        main {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .card-body h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0f5bb0;
+        }
+
+        footer {
+            background-color: #1a73e8;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a Mi Página Web Interactiva</h1>
+    </header>
+
+    <main>
+        <h2>Explora Nuestros Servicios</h2>
+        <p>Descubre nuestros productos y haz clic en los botones para aprender más.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="img1.jpg" alt="Imagen del servicio 1">
+                <div class="card-body">
+                    <h3>Servicio 1</h3>
+                    <p>Descripción breve de lo que ofrecemos en este servicio.</p>
+                    <button onclick="mostrarMensaje('¡Has seleccionado el Servicio 1!')">Ver Más</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img1.jpg" alt="Imagen del servicio 2">
+                <div class="card-body">
+                    <h3>Servicio 2</h3>
+                    <p>Descripción breve de lo que ofrecemos en este servicio.</p>
+                    <button onclick="mostrarMensaje('¡Has seleccionado el Servicio 2!')">Ver Más</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img1.jpg" alt="Imagen del servicio 3">
+                <div class="card-body">
+                    <h3>Servicio 3</h3>
+                    <p>Descripción breve de lo que ofrecemos en este servicio.</p>
+                    <button onclick="mostrarMensaje('¡Has seleccionado el Servicio 3!')">Ver Más</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden-message" id="mensaje">
+            ¡Gracias por explorar nuestros servicios!
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript: Función para mostrar un mensaje al hacer clic en los botones
+        function mostrarMensaje(mensaje) {
+            document.getElementById('mensaje').textContent = mensaje;
+            document.getElementById('mensaje').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
